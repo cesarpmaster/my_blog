@@ -1,4 +1,18 @@
-<%= form_with model: @article do |f| %>
+<% if @article.errors.any? %>
+    <h1>Caca</h1>
+    <div class="form_errors">
+        <h3>Errors</h3>
+        <li>
+            <ul>
+                <% @article.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                <% end %>
+            </ul>
+        </li>
+    </div>
+<% end %>
+
+<div id="content"> <%= form_with model: @article do |f| %>
     <div>
         <%= f.label :title %>
         <%= f.text_field :title %>
@@ -15,3 +29,4 @@
     </div>
     <%= f.submit %>
 <% end %>
+</div>

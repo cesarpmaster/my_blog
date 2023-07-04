@@ -19,9 +19,10 @@ class ArticlesController < ApplicationController
         @article = Article.new(article_params)
 
         if @article.save
+            flash[:notice] = 'Published article'
             redirect_to articles_path
         else
-            render action: :new
+            render action: :new, status: :unprocessable_entity
         end
     end
 
