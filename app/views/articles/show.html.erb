@@ -1,0 +1,7 @@
+<div>
+    <%= @article.title %>
+    <%= image_tag @article.cover %>
+    <%= @article.content %>
+    <%= link_to "Edit Article", edit_article_path(@article.id) %>
+    <%= link_to "Delete Article", article_path(@article.id), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+</div>

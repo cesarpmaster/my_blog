@@ -1,0 +1,54 @@
+version: "3.7"
+
+services:
+  pg:
+    image: postgres:13.4-alpine
+    environment:
+      POSTGRES_PASSWORD: password
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+    stdin_open: true
+    tty: true
+
+  redis:
+    image: redis:6.2.5-alpine
+    volumes:
+      - redis_data:/data
+    stdin_open: true
+    tty: true
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        U_NAME: $U_NAME
+        U_UID: $U_UID
+        U_GID: $U_GID
+    command: "bundle exec rails server -b 0.0.0.0 -p 3000"
+    entrypoint: "/home/${U_NAME}/my_blog/docker-entrypoint.sh"
+    ports:
+      - '3000:3000'
+      - '3035:3035'
+    depends_on:
+      - pg
+      - redis
+    environment:
+      RAILS_ENV: development
+      REDIS_URL: redis
+      DB_PASSWORD: password
+      DB_USERNAME: postgres
+      DB_HOST: pg
+    volumes:
+      - ruby_gems:/home/${U_NAME}/ruby_gems
+      - .:/home/${U_NAME}/my_blog
+      - ./.bashrc:/home/${U_NAME}/.bashrc
+      - ./.bash_history:/home/${U_NAME}/.bash_history
+      - ./.irb_history:/home/${U_NAME}/.irb_history
+    stdin_open: true
+    tty: true
+
+volumes:
+  pg_data:
+  redis_data:
+  ruby_gems:

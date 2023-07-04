@@ -1,0 +1,6 @@
+<%= link_to "New Article", new_article_path %>
+<% @articles.each do |article| %>
+    <h1><%= article.title %></h1>
+    <%= image_tag article.cover %>
+    <%= link_to "Read Article", article_path(article.id) %>
+<% end %>

@@ -1,0 +1,17 @@
+<%= form_with model: @article do |f| %>
+    <div>
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+    </div>
+
+    <div>
+        <%= f.label :cover %>
+        <%= f.file_field :cover %>
+    </div>
+
+    <div>
+        <%= f.label :content %>
+        <%= f.rich_text_area :content %>
+    </div>
+    <%= f.submit %>
+<% end %>
