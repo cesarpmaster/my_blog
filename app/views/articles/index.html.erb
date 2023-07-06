@@ -1,14 +1,19 @@
 <div>
     <h1 id= content > Home </h1>
-    <%= link_to 'New Article', new_article_path %>
+    <div class="articles">
+        <%= link_to 'New Article', new_article_path %>
+    </div>
 </div>
 
-<body>
-    <div id="content">
-        <% @articles.each do |article| %>
-            <h2> <%= article.title %> </h2>
-            <%= image_tag article.cover if article.cover.attached? %>
-            <%= link_to "Read Article", article_path(article.id) %>
-        <% end %>
-    </div>
-</body>
+
+<div class="articles">
+    <% @articles.each do |article| %>
+        <div class="article">
+            <%= image_tag article.cover, class: "article-cover" if article.cover.attached? %>
+            <div class="article-details">
+                <h2 class="article-title"> <%= article.title %> </h2>
+                <%= link_to "Read Article", article_path(article.id) %>
+            </div>
+        </div>
+    <% end %>
+</div>
