@@ -15,7 +15,8 @@ RUN apk update; \
       imagemagick \
       gcompat \
       chromium \
-      chromium-chromedriver
+      chromium-chromedriver \
+      openssh-client
 
 ARG U_NAME=docker
 ARG U_UID=1000
@@ -46,6 +47,7 @@ ENV BUNDLE_PATH "${GEM_HOME}"
 
 ENV PATH "${GEM_HOME}/bin:${GEM_HOME}/ruby/3.2.0/bin:${PATH}"
 
+RUN mkdir -p "${HOME_PATH}/.ssh"
 RUN mkdir -p "${GEM_HOME}"
 
 ENV APP_PATH "${HOME_PATH}/my_blog"

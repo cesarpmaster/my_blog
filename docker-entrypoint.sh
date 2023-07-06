@@ -2,6 +2,12 @@
 
 set -e
 
+eval $(ssh-agent -s)
+
+if [ ! -z "${SSH_KEY}" ]; then
+  ssh-add "${SSH_KEY}"
+fi
+
 if [ -f ~/my_blog/tmp/pids/server.pid ]; then
   rm ~/my_blog/tmp/pids/server.pid
 fi

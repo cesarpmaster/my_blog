@@ -39,12 +39,15 @@ services:
       DB_PASSWORD: password
       DB_USERNAME: postgres
       DB_HOST: pg
+      SSH_KEY: /home/${U_NAME}/.ssh/id_ed25519
     volumes:
       - ruby_gems:/home/${U_NAME}/ruby_gems
       - .:/home/${U_NAME}/my_blog
       - ./.bashrc:/home/${U_NAME}/.bashrc
       - ./.bash_history:/home/${U_NAME}/.bash_history
       - ./.irb_history:/home/${U_NAME}/.irb_history
+      - ./.ssh/id_ed25519:/home/${U_NAME}/.ssh/id_ed25519
+      - ./.ssh/id_ed25519.pub:/home/${U_NAME}/.ssh/id_ed25519.pub
     stdin_open: true
     tty: true
 
