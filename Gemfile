@@ -65,6 +65,7 @@ group :development do
   gem "capistrano", "~> 3.10", require: false
   gem "capistrano-rails", "~> 1.6", require: false
   gem "capistrano-rbenv", "~> 2.2", require: false
+  gem "capistrano3-puma", github: "seuros/capistrano-puma", require: false
 
   gem "ed25519", "~> 1.3"
   gem "bcrypt_pbkdf", "~> 1.1"

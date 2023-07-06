@@ -3,7 +3,7 @@
 # Defines a single server with a list of roles and multiple properties.
 # You can define all roles on a single server, or split them:
 
-server "ec2-3-138-34-203.us-east-2.compute.amazonaws.com", user: "ec2-user", roles: %w{app db web}
+server "ec2-3-135-194-19.us-east-2.compute.amazonaws.com", user: "ec2-user", roles: %w{app db web}
 
 # role-based syntax
 # ==================

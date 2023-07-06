@@ -1,3 +1,12 @@
+GIT
+  remote: https://github.com/seuros/capistrano-puma.git
+  revision: 2cc11846540489edda10d83e026c9bea04e6fab1
+  specs:
+    capistrano3-puma (6.0.0.beta.1)
+      capistrano (~> 3.7)
+      capistrano-bundler
+      puma (>= 5.1, < 7.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -240,8 +249,8 @@ GEM
 
 PLATFORMS
   aarch64-linux-musl
-  x86_64-linux-musl
   x86_64-linux
+  x86_64-linux-musl
 
 DEPENDENCIES
   bcrypt_pbkdf (~> 1.1)
@@ -249,6 +258,7 @@ DEPENDENCIES
   capistrano (~> 3.10)
   capistrano-rails (~> 1.6)
   capistrano-rbenv (~> 2.2)
+  capistrano3-puma!
   capybara
   debug
   ed25519 (~> 1.3)
