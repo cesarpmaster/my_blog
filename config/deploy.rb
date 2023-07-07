@@ -22,7 +22,7 @@ set :deploy_to, "/home/ec2-user/my_blog"
 # set :pty, true
 
 # Default value for :linked_files is []
-append :linked_files, "config/database.yml", "config/puma.rb"
+append :linked_files, "config/database.yml", "config/puma.rb", "config/master.key"
 
 # Default value for linked_dirs is []
 append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system", "vendor", "storage"
