@@ -43,3 +43,4 @@ set :rbenv_type, :user
 set :rbenv_ruby, File.read('.ruby-version').strip
 
 set :systemctl_user, :system
+set :pty, true
