@@ -41,3 +41,5 @@ append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/syst
 
 set :rbenv_type, :user
 set :rbenv_ruby, File.read('.ruby-version').strip
+
+set :systemctl_user, :system
