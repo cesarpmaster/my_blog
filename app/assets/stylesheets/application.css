@@ -14,10 +14,8 @@
  *= require_self
  */
 body {
-  background-color: #4c9a9c;
-  max-width: 1024px;
-  margin: 0 auto;
-  font-family: Helvatica, Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", Sans-Serif;
+  background-image: url("https://img.freepik.com/free-vector/watercolor-background_87374-69.jpg?w=2000");
 }
 
 p {
@@ -30,35 +28,97 @@ input {
 
 h1 {
   color: rgb(0, 0, 0);
+  font-size: 60px;
+  font-family: Courier;
+  text-align: center;
+}
+h2 {
+  color: rgb(0, 0, 0);
+  font-size: 40px;
+}
+
+h3 {
+  color: rgb(0, 0, 0);
+  font-size: 50px;
+}
+
+h4 {
+  color: rgb(0, 0, 0);
+  font-size: 60px;
+}
+
+img {
+  height: 100%;
+  object-fit: cover;
+  height:150px;
+}
+
+.profile-small {
+  height:150px;
+  border-radius: 50%;
+  border: 10px solid #FEDE00;
+}
+
+.header {
+  padding: 40px;
+  text-align: center;
+  background: #f9f7f7;
+  margin: 30px;
+  font-size: 20px;
 }
 
 * {
-  font-family: sans-serif;
+  box-sizing: border-box;
 }
 
-.articles {
-  background-color: #fff;
-  border: 10px solid #ccc;
-  padding: 10px 10px 20px 10px;
-  display: grid;
-  gap: 10px;
+.description {
+  float: left;
+  width: 45%;
+  padding: 40px;
+  padding-left: 70px;
+  padding-right: 70px;
+  height: 475px;
+  margin: 30px;
+  margin-right: 30px;
+  margin-bottom: 70px;
+  background-color:  #FEDE00;
+  line-height:2;
 }
 
-#notification {
-  border: 5px solid #9c9;
-  background-color: #cfc;
-  padding: 5px;
-  margin: 10px 0;
+.section-heading {
+  text-align:center;
+  color:#102C4E;
+  margin-top: 150px;
+  margin-bottom:70px;
+  font-size: 35px;
 }
 
-.article {
-  background-color: #fff;
-  border: 10px solid #ccc;
-  padding: 10px 10px 20px 10px;
-  display: grid;
-  grid-template-columns: 200px auto;
-  gap: 10px;
-  grid-template-areas: "article-cover article-details";
+.column-2 {
+  float: left;
+  width: 45%;
+  padding: 40px;
+  padding-left:70px;
+  padding-right: 70px;
+  height: 475px;
+  margin:30px;
+  margin-right:30px;
+  margin-bottom: 70px;
+  background-image: url("https://thenational-the-national-prod.cdn.arcpublishing.com/resizer/VSiMduTatLPA9HeBkJd3Sfdypeg=/800x0/filters:format(jpg):quality(70)/cloudfront-eu-central-1.images.arcpublishing.com/thenational/OXPRBDUNOND5NBTQGE5A4MVDRI.JPG");
+  line-height:2;
+  object-fit: cover;
+}
+
+.large-profile {
+  background-size: cover;
+  background-position: center;
+}
+
+.section-heading {
+  text-align:center;
+  color:#102C4E;
+  margin-top: 150px;
+  margin-bottom:70px;
+  font-size: 35px;
 }
 
 .article-cover {
@@ -74,28 +134,110 @@ h1 {
   grid-area: article-details;
 }
 
-.button {
-  background-color: #000000;
-  border: none;
-  color: white;
-  padding: 15px 32px;
+.project-text {
+  text-align:center;
+  font-size:50px;
+}
+
+.new-article {
+  padding: 40px;
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
+  background: #f9f7f7;
+  margin: 30px;
+  font-size: 20px;
 }
 
-.field_with_errors {
-  color: red;
-  background: transparent;
+.column-4 {
+  float: left;
+  width: 21%;
+  padding: 10px;
+  margin:20px;
+  height: 250px;
 }
 
-.field_with_errors input {
-  border: thin solid red;
+.project-text {
+  text-align:center;
+  font-size:50px;
 }
 
-.form_errors {
-  color: red
+.articles {
+  background-color: #fff;
+  border: 10px solid #ccc;
+  padding: 10px 10px 20px 10px;
+  display: grid;
+  gap: 10px;
+}
+
+.articles {
+  background-color: #fff;
+  border: 10px solid #ccc;
+  padding: 10px 10px 20px 10px;
+  display: grid;
+  gap: 10px;
+}
+
+.article {
+  background-color: #fff;
+  border: 10px solid #ccc;
+  padding: 10px 10px 20px 10px;
+  display: grid;
+  grid-template-columns: 200px auto;
+  gap: 10px;
+  grid-template-areas: "article-cover article-details";
+}
+
+.project-text {
+  text-align:center;
+  font-size:50px;
+}
+
+#notification {
+  border: 5px solid #9c9;
+  background-color: #cfc;
+  padding: 5px;
+  margin: 10px 0;
+}
+
+.full-image {
+  max-width: 100%;  
+  height: auto;  
+}
+
+.footer {
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  height: 90px;
+  background-color: #D0DAEE;
+}
+
+.footer-text-left {
+  font-size: 25px;
+  padding-left: 40px;
+  float: left;
+  word-spacing: 20px;
+}
+
+a.menu:hover {
+  background-color: #FEDE00;
+  font-size: 20px;
+}
+
+
+.footer-content-right {
+  padding-right:40px;
+  margin-top:20px;
+  float:right;
+}
+
+.icon-style {
+  height:40px;
+  margin-left:20px;
+  margin-top:5px;
+}
+
+.icon-style:hover {
+  background-color:yellow;
+  padding:5px;
 }

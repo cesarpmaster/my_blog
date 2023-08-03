@@ -1,6 +1,6 @@
+<h1><%= @article.title %></h1>
 <div class="article">
-    <h1><%= @article.title %></h1>
-    <%= image_tag @article.cover, class: "article-cover" if @article.cover.attached? %>
+    <%= image_tag @article.cover, class: "article-cover full-image" if @article.cover.attached? %>
     <div class="article-details"><%= @article.content %></div>
     <%= link_to "Edit Article", edit_article_path(@article.id) %>
     <%= link_to "Delete Article", article_path(@article.id), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
